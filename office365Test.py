@@ -33,27 +33,3 @@ for msgNum in range(mailcount):
 	except Exception as e:
 		print(e)
 		continue
-	
-	
-	#my new code used in rackspace test, which works vv
-	#for message in pop3server.retr(msgNum+1)[0]:
-		#raw_message = pop3server.retr(message)[1]
-		#print(raw_message)
-		#str_message = email.message_from_bytes(b'\n'.join(raw_message))
-		#print(str_message)
-		#body = str(str_message.get_payload()[0])
-		#print(body)
-		#messageUID=str(pop3server.uidl(message))
-		#print(messageUID)
-		#print(messageUID)
-		
-		
-    
-	#Original code borrowed from orig file vv
-    #raw_message=self.popServer.retr(messageNum)[1]
-    #str_message = email.message_from_bytes(b'\n'.join(raw_message))
-    #body = str(str_message.get_payload()[0])# GETS BODY
-    #messageUID=str(self.popServer.uidl(messageNum))
-    #messageUID=re.findall('')
-    #messageUID=re.findall('UID\d+-\d+',messageUID,0)[0] # <<<< PROBLEM LINE!
-    #print(messageUID)
